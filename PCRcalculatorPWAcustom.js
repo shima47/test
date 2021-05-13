@@ -1,9 +1,32 @@
+//ボタンオブジェクト取得
+const $button = document.getElementById("caluculate");
+//フォームオブジェクトを取得
+const $form = document.getElementById("form");
 //name="oneVol"オブジェクト配列を取得
 const $oneVol = document.getElementsByName("oneVol");
-console
+
+//ボタンを押すと実行
+$button.addEventListener("click",() => {
+	caluculate();
+});
+
+//フォームに入力すると実行
+$form.addEventListener("keyup",() => {
+	caluculate();
+});
+
+//容量変更すると実行
+$oneVol.forEach((oneVolForm) => {
+	oneVolForm.addEventListener("keyup",() => {
+		caluculate();
+	});
+});
 
 //計算系
-const caluculate = (Num) => {
+const caluculate = () => {
+	//フォーム内の値を取得
+	const Num = $form.value;
+
 	//oneVolを配列に格納
 	let oneVol = [];
 	let oneVolIndex = 0;
@@ -37,23 +60,4 @@ const caluculate = (Num) => {
 		$result[resultIndex].textContent = resultVol[resultIndex] + "μL";
 		resultIndex++;
 	};
-}
-
-//ボタンオブジェクト取得
-const $button = document.getElementById("caluculate");
-//フォームオブジェクトを取得
-const $form = document.getElementById("form");
-
-//ボタンを押すと実行
-$button.addEventListener("click",() => {
-	//フォーム内の値を取得
-	const Num = $form.value;
-	caluculate(Num);
-});
-
-//入力すると実行
-$form.addEventListener("keypress",() => {
-	//フォーム内の値を取得
-	const Num = $form.value;
-	caluculate(Num);
-});
+};
