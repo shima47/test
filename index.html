@@ -48,55 +48,53 @@
 		<div class="row align-items-center">
 			<div class="col"></div>
 			<div class="col">x1</div>
-			<div class="col">Result</div>
+			<div class="col" id="multiple">Result</div>
 		</div>
 		<div class="mt-2 row align-items-center">
 			<div class="col">MilliQ</div>
 			<div class="col">7μL</div>
-			<div class="col">Result</div>
+			<div class="col" name="result">Result</div>
 		</div>
 		<div class="mt-2 row align-items-center">
 			<div class="col">Buffar</div>
 			<div class="col">1μL</div>
-			<div class="col">Result</div>
+			<div class="col" name="result">Result</div>
 		</div>
 		<div class="mt-2 row align-items-center">
 			<div class="col">dNTP</div>
 			<div class="col">1μL</div>
-			<div class="col">Result</div>
+			<div class="col" name="result">Result</div>
 		</div>
 		<div class="mt-2 row align-items-center">
 			<div class="col">ExTaq</div>
 			<div class="col">0.075μL</div>
-			<div class="col">Result</div>
+			<div class="col" name="result">Result</div>
 		</div>
 		<div class="mt-2 row align-items-center">
 			<div class="col">Primer</div>
 			<div class="col">0.8μL</div>
-			<div class="col">Result</div>
+			<div class="col" name="result">Result</div>
 		</div>
 		
-		<div class="mt-3 row align-items-center">
-			<div class="col"></div>
-			<div class="col d-flex justify-content-center" id="caluculate">
-				<button type="button" class="btn btn-primary">計算</button>
-			</div>
-			<div class="col d-flex justify-content-end" id="custom">
-				<a class="mx-1" href="custom.html" style="text-decoration: none;" role="button">カスタム➡</a>
-			</div>
+		<div class="mt-3 d-flex justify-content-center">
+			<button type="button" class="btn btn-primary" id="caluculate">計算</button>
+		</div>
+
+		<div class="mt-3 d-flex justify-content-center">
+			<a href="custom.html" style="text-decoration: none;" role="button" id="custom">カスタム➡</a>
 		</div>
 
 		<div class="mt-5 h6 text-left">Total</div>
 
 		<div class="mt-0 row align-items-center">
-			<div class="col">primerなし</div>
+			<div class="col">Primerなし</div>
 			<div class="col">9.075μL</div>
-			<div class="col">Result</div>
+			<div class="col" name="result">Result</div>
 		</div>
 		<div class="mt-2 row align-items-center">
-			<div class="col">primerあり</div>
+			<div class="col">Primerあり</div>
 			<div class="col">9.875μL</div>
-			<div class="col">Result</div>
+			<div class="col" name="result">Result</div>
 		</div>
 		
 	</div>
